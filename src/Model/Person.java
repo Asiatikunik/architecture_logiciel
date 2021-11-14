@@ -1,23 +1,25 @@
 package Model;
 
 public class Person {
-    public int idPerson;
+    public String idPerson;
     public String firstname;
     public String lastname;
-    // Pas de type prof ou eleve vu que ce son les personnes qui s'occupe des "groupes" qui font les eleves
 
-
-    public Person(int idPerson, String firstname, String lastname) {
+    public Person(String idPerson, String firstname, String lastname) {
         this.idPerson = idPerson;
         this.firstname = firstname;
         this.lastname = lastname;
     }
+    public Person(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
 
-    public int getIdPerson() {
+    public String getIdPerson() {
         return idPerson;
     }
 
-    public void setIdPerson(int idPerson) {
+    public void setIdPerson(String idPerson) {
         this.idPerson = idPerson;
     }
 
@@ -35,5 +37,10 @@ public class Person {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    @Override
+    public String toString(){
+        return firstname + " " + lastname;
     }
 }

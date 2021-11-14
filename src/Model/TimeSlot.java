@@ -1,23 +1,29 @@
 package Model;
 
 public class TimeSlot {
-    public int idTimeSlot;
+    public String idTimeSlot;
     public String dateTimeSlot;
     public String startTimeSlot;
     public String endTimeSlot;
 
-    public TimeSlot(int idTimeSlot, String dateTimeSlot, String startTimeSlot, String endTimeSlot) {
+    public TimeSlot(String idTimeSlot, String dateTimeSlot, String startTimeSlot, String endTimeSlot) {
         this.idTimeSlot = idTimeSlot;
         this.dateTimeSlot = dateTimeSlot;
         this.startTimeSlot = startTimeSlot;
         this.endTimeSlot = endTimeSlot;
     }
 
-    public int getIdTimeSlot() {
+    public TimeSlot(String dateTimeSlot, String startTimeSlot, String endTimeSlot) {
+        this.dateTimeSlot = dateTimeSlot;
+        this.startTimeSlot = startTimeSlot;
+        this.endTimeSlot = endTimeSlot;
+    }
+
+    public String getIdTimeSlot() {
         return idTimeSlot;
     }
 
-    public void setIdTimeSlot(int idTimeSlot) {
+    public void setIdTimeSlot(String idTimeSlot) {
         this.idTimeSlot = idTimeSlot;
     }
 

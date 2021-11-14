@@ -1,27 +1,31 @@
 package Model;
 
 public class Room {
-    public int idRoom;
-    public int capacity;
+    public String idRoom;
+    public String capacity;
 
-    public Room(int idRoom, int capacity) {
+    public Room(String idRoom, String capacity) {
         this.idRoom = idRoom;
         this.capacity = capacity;
     }
 
-    public int getIdRoom() {
+    public Room(String capacity) {
+        this.capacity = capacity;
+    }
+
+    public String getIdRoom() {
         return idRoom;
     }
 
-    public void setIdRoom(int idRoom) {
+    public void setIdRoom(String idRoom) {
         this.idRoom = idRoom;
     }
 
-    public int getCapacity() {
+    public String getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(String capacity) {
         this.capacity = capacity;
     }
 }
