@@ -15,20 +15,20 @@ public class Reservation {
         return idPerson;
     }
 
-    public int getIdRoom() {
-        return idRoom;
-    }
-
-    public int getIdTimeSlot() {
-        return idTimeSlot;
-    }
-
     public void setIdPerson(int idPerson) {
         this.idPerson = idPerson;
     }
 
+    public int getIdRoom() {
+        return idRoom;
+    }
+
     public void setIdRoom(int idRoom) {
         this.idRoom = idRoom;
+    }
+
+    public int getIdTimeSlot() {
+        return idTimeSlot;
     }
 
     public void setIdTimeSlot(int idTimeSlot) {

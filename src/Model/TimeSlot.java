@@ -1,47 +1,47 @@
 package Model;
 
 public class TimeSlot {
-    public int id;
-    public String date;
-    public String start;
-    public String end;
+    public int idTimeSlot;
+    public String dateTimeSlot;
+    public String startTimeSlot;
+    public String endTimeSlot;
 
-    public TimeSlot(int id, String date, String start, String end) {
-        this.id = id;
-        this.date = date;
-        this.start = start;
-        this.end = end;
+    public TimeSlot(int idTimeSlot, String dateTimeSlot, String startTimeSlot, String endTimeSlot) {
+        this.idTimeSlot = idTimeSlot;
+        this.dateTimeSlot = dateTimeSlot;
+        this.startTimeSlot = startTimeSlot;
+        this.endTimeSlot = endTimeSlot;
     }
 
-    public int getId() {
-        return id;
+    public int getIdTimeSlot() {
+        return idTimeSlot;
     }
 
-    public String getDate() {
-        return date;
+    public void setIdTimeSlot(int idTimeSlot) {
+        this.idTimeSlot = idTimeSlot;
     }
 
-    public String getStart() {
-        return start;
+    public String getDateTimeSlot() {
+        return dateTimeSlot;
     }
 
-    public String getEnd() {
-        return end;
+    public void setDateTimeSlot(String dateTimeSlot) {
+        this.dateTimeSlot = dateTimeSlot;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getStartTimeSlot() {
+        return startTimeSlot;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartTimeSlot(String startTimeSlot) {
+        this.startTimeSlot = startTimeSlot;
     }
 
-    public void setStart(String start) {
-        this.start = start;
+    public String getEndTimeSlot() {
+        return endTimeSlot;
     }
 
-    public void setEnd(String end) {
-        this.end = end;
+    public void setEndTimeSlot(String endTimeSlot) {
+        this.endTimeSlot = endTimeSlot;
     }
 }
