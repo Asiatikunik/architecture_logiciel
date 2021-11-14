@@ -98,8 +98,27 @@ public class arch_log {
         }
         System.out.println();
 
-        Reservation add4 = new Reservation("1", "2", "1");
-        reservationController.addReservation(add4);
+//        Reservation add4 = new Reservation("1", "2", "1");
+//        reservationController.addReservation(add4);
+//
+//        listReservation = reservationController.getListReservation();
+//        for (Reservation reservation : listReservation) {
+//            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
+//        }
+//        System.out.println();
+
+//        Reservation supp4 = new Reservation("2", "1", "1");
+//        reservationController.deleteReservation(supp4);
+//
+//        listReservation = reservationController.getListReservation();
+//        for (Reservation reservation : listReservation) {
+//            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
+//        }
+//        System.out.println();
+
+
+        Reservation alter1 = new Reservation("2", "1", "2");
+        reservationController.changeReservation(alter1);
 
         listReservation = reservationController.getListReservation();
         for (Reservation reservation : listReservation) {
@@ -108,3 +127,4 @@ public class arch_log {
         System.out.println();
     }
 }
+
