@@ -13,6 +13,9 @@ public class Room {
         this.capacity = capacity;
     }
 
+    public Room() {
+    }
+
     public String getIdRoom() {
         return idRoom;
     }

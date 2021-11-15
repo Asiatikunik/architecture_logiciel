@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class TimeSlotController {
     Connection conn;
 
+    /*
+        Requete qui permet de affichier tous les créneaux horaire
+     */
     public ArrayList<TimeSlot> getListTimeSlot() {
         ArrayList<TimeSlot> returned = new ArrayList<>();
         String query = "SELECT * FROM timeSlot";
@@ -29,6 +32,9 @@ public class TimeSlotController {
         return returned;
     }
 
+    /*
+        Requete qui permet d'ajouter un créneau horaire
+     */
     public void addTimeSlot(TimeSlot timeslot) {
         String query = "INSERT INTO timeslot VALUES (?,?,?,?)";
         try {
@@ -48,6 +54,9 @@ public class TimeSlotController {
         }
     }
 
+    /*
+        Requete en base qui permet de supprimer un créneau horaire
+     */
     public void deleteTimeSlot(TimeSlot timeslot) {
         String query = "DELETE FROM `TimeSlot` WHERE `idTimeSlot` LIKE ?";
         try {

@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class PersonController {
     Connection conn;
 
+    /*
+        Requete en base pour montrer tout les personnes
+     */
     public ArrayList<Person> getListPerson() {
         ArrayList<Person> returned = new ArrayList<>();
         String query = "SELECT * FROM person";
@@ -28,6 +31,9 @@ public class PersonController {
         return returned;
     }
 
+    /*
+        Requete en base pour ajouter une personne
+     */
     public void addPerson(Person person) {
         String query = "INSERT INTO Person VALUES (?,?,?)";
         try {
@@ -46,6 +52,9 @@ public class PersonController {
         }
     }
 
+    /*
+        Requete en base pour supprimer une personne
+     */
     public void deletePerson(Person person) {
         String query = "DELETE FROM `person` WHERE `idPerson` LIKE ?";
 

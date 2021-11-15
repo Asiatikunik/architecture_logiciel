@@ -19,6 +19,10 @@ public class TimeSlot {
         this.endTimeSlot = endTimeSlot;
     }
 
+    public TimeSlot(String idTimeSlot) {
+        this.idTimeSlot = idTimeSlot;
+    }
+
     public String getIdTimeSlot() {
         return idTimeSlot;
     }

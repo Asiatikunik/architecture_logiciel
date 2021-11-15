@@ -10,6 +10,9 @@ public class RoomController {
 
         Connection conn;
 
+        /*
+            Requete en base qui permet de afficher tous les salles
+         */
         public ArrayList<Room> getListRoom() {
         ArrayList<Room> returned = new ArrayList<>();
         String query = "SELECT * FROM room";
@@ -30,6 +33,9 @@ public class RoomController {
         return returned;
     }
 
+    /*
+        Requete en base qui permet de ajouter une salle
+     */
     public void addRoom(Room room) {
         String query = "INSERT INTO room VALUES (?,?)";
         try {
@@ -47,6 +53,9 @@ public class RoomController {
         }
     }
 
+    /*
+        Requete en base qui permet de supprimer une salle
+     */
     public void deleteRoom(Room room) {
         String query = "DELETE FROM `room` WHERE `idRoom` LIKE ?";
         try {

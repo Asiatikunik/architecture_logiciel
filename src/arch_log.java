@@ -1,11 +1,5 @@
 import Controller.*;
-import Model.Person;
-import Model.Reservation;
-import Model.Room;
-import Model.TimeSlot;
-
-import java.sql.Time;
-import java.util.ArrayList;
+import View.Affichage;
 
 public class arch_log {
     public static void main(String[] args) {
@@ -92,11 +86,11 @@ public class arch_log {
 
         /******************************************/
 
-        ArrayList<Reservation> listReservation = reservationController.getListReservation();
-        for (Reservation reservation : listReservation) {
-            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
-        }
-        System.out.println();
+//        ArrayList<Reservation> listReservation = reservationController.getListReservation();
+//        for (Reservation reservation : listReservation) {
+//            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
+//        }
+//        System.out.println();
 
 //        Reservation add4 = new Reservation("1", "2", "1");
 //        reservationController.addReservation(add4);
@@ -117,14 +111,20 @@ public class arch_log {
 //        System.out.println();
 
 
-        Reservation alter1 = new Reservation("2", "1", "2");
-        reservationController.changeReservation(alter1);
+//        Reservation alter1 = new Reservation("2", "1", "2");
+//        reservationController.changeReservation(alter1);
+//
+//        listReservation = reservationController.getListReservation();
+//        for (Reservation reservation : listReservation) {
+//            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
+//        }
+//        System.out.println();
 
-        listReservation = reservationController.getListReservation();
-        for (Reservation reservation : listReservation) {
-            System.out.println(reservation.getIdPerson() + " " + reservation.getIdRoom() + " " + reservation.getIdTimeSlot());
-        }
-        System.out.println();
+        /******************************************/
+
+        Affichage jd = new Affichage();
+        jd.Fenetre();
+
     }
 }
 

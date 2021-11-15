@@ -15,6 +15,10 @@ public class Person {
         this.lastname = lastname;
     }
 
+    public Person(String idPerson) {
+        this.idPerson = idPerson;
+    }
+
     public String getIdPerson() {
         return idPerson;
     }

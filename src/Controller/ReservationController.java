@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class ReservationController {
     Connection conn;
 
+    /*
+        Requete qui permet de montrer tout les réservations
+     */
     public ArrayList<Reservation> getListReservation() {
         ArrayList<Reservation> returned = new ArrayList<>();
         String query = "SELECT * FROM reservation";
@@ -29,6 +32,9 @@ public class ReservationController {
         return returned;
     }
 
+    /*
+        Requete en base pour ajouter une réservation
+     */
     public void addReservation(Reservation reservation) {
         String query = "INSERT INTO Reservation VALUES (?,?,?)";
         try {
@@ -47,6 +53,9 @@ public class ReservationController {
         }
     }
 
+    /*
+        Requete qui permet de supprimer une réservation
+     */
     public void deleteReservation(Reservation reservation) {
         String query = " DELETE FROM `Reservation` WHERE `idPerson` LIKE ? AND `idRoom` LIKE ? AND `idTimeSlot` LIKE ?";
         try {
@@ -65,7 +74,10 @@ public class ReservationController {
         }
     }
 
-        public void changeReservation(Reservation reservation) {
+    /*
+        Requete en base qui permet de changer une réservation
+     */
+    public void changeReservation(Reservation reservation) {
         String query = "UPDATE `Reservation` SET `idTimeSlot` = ? WHERE `idRoom` LIKE ?  AND `idPerson` LIKE ?";
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/architecture_logiciel","root","");
